@@ -1,0 +1,41 @@
+
+<div class="body">
+    <div class="container-fluid ">
+        <div class="row justify-content-center min-vh-100 align-items-center">
+            <div class="col-md-6 col-12 formbox ">
+                <div class="formboxLogo ">
+                    <h4 class="my-4 mx-3">Quick as a whistle.</h4>
+                </div>
+                <div class="">
+                    <div class="my-5 mx-5 ">
+                        <input class="text-center my-1" type="text" id="A" [(ngModel)]="num1"><br>
+                    </div>
+                    <div class="my-5 mx-5 ">
+                        <input class="text-center my-1 " type="text" id="" [(ngModel)]="num2">
+                        <span class="mx-5 text-center"></span><span class="mx-2 text-center result">{{result}}</span>
+                    </div>
+                    <div class="dropdown open mx-5 my-5 text-white">
+                        <button class="btn button dropdown-toggle text-center my-1" type="button" id="triggerId"
+                            data-bs-toggle="dropdown" aria-haspopup="true">
+                            {{dropdownlist}}
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="triggerId">
+                            <button class="dropdown-item text-center"
+                                (click)="operator='+';onclick(operator)">ADD</button>
+                            <button class="dropdown-item text-center"
+                                (click)="operator='-';onclick(operator)">SUB</button>
+                            <button class="dropdown-item text-center"
+                                (click)="operator='*';onclick(operator)">MULTIPLY</button>
+                            <button class="dropdown-item text-center "
+                                (click)="operator='/';onclick(operator)">DIVIDE</button>
+                        </div>
+                    </div>
+                    <div class="clickbtn my-5 ">
+                        <button type="button" (click)="onselect(num1,num2,operator)">calculate</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+          
